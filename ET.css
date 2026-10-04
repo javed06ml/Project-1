@@ -1,0 +1,295 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0F172A;
+    color: #F8FAFC;
+}
+
+/* Main Container */
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 35px;
+    background-color: #123B3A;
+border: 1px solid #245B57;
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 32px;
+    color: #F8FAFC;
+    letter-spacing: 0.5px;
+}
+
+/* Month */
+
+.month-box {
+    background-color: #0F172A;
+    padding: 14px 20px;
+    margin-bottom: 22px;
+    border: 1px solid #263548;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.month-box label {
+    color: #CBD5E1;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.month-box input {
+    padding: 9px 12px;
+    background-color: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #475569;
+    border-radius: 8px;
+    outline: none;
+}
+
+/* Dashboard */
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.box {
+    background-color: #0F172A;
+    padding: 22px;
+    text-align: center;
+    border: 1px solid #263548;
+    border-radius: 16px;
+    transition: 0.25s ease;
+}
+
+.box:hover {
+    transform: translateY(-3px);
+    border-color: #3B6659;
+}
+
+.box h3 {
+    color: #94A3B8;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.box h2 {
+    font-size: 26px;
+}
+
+/* Income */
+
+.income-box h2 {
+    color: #4ADE80;
+}
+
+/* Expense */
+
+.expense-box h2 {
+    color: #FB7185;
+}
+
+/* Balance */
+
+.balance-box h2 {
+    color: #60A5FA;
+}
+
+/* Form */
+
+.form-box {
+    background-color: #0F172A;
+    padding: 24px;
+    border: 1px solid #263548;
+    border-radius: 16px;
+    margin-bottom: 22px;
+}
+
+.form-box h2 {
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+}
+
+/* Input */
+
+input,
+select {
+    width: 100%;
+    padding: 12px 13px;
+    background-color: #1E293B;
+    color: #F8FAFC;
+    border: 1px solid #334155;
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+    transition: 0.2s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #4ADE80;
+}
+
+input::placeholder {
+    color: #64748B;
+}
+
+/* Button */
+
+button {
+    padding: 12px;
+    background-color: #2F7D5B;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+button:hover {
+    background-color: #3A936B;
+}
+
+/* Filter */
+
+.filter-box {
+    background-color: #0F172A;
+    padding: 20px;
+    border: 1px solid #263548;
+    border-radius: 16px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+/* History */
+
+.history {
+    background-color: #0F172A;
+    padding: 24px;
+    border: 1px solid #263548;
+    border-radius: 16px;
+    overflow-x: auto;
+}
+
+.history h2 {
+    margin-bottom: 18px;
+    font-size: 20px;
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th,
+td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #263548;
+    text-align: left;
+}
+
+th {
+    background-color: #1E293B;
+    color: #94A3B8;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+th:first-child {
+    border-top-left-radius: 8px;
+}
+
+th:last-child {
+    border-top-right-radius: 8px;
+}
+
+td {
+    color: #CBD5E1;
+    font-size: 14px;
+}
+
+tr:hover td {
+    background-color: #162033;
+}
+
+/* Edit and Delete */
+
+.edit-btn {
+    background-color: #1E90FF;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: #FF0000;
+}
+
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .container {
+        width: 94%;
+        padding: 20px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+        border-radius: 18px;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 22px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-box {
+        grid-template-columns: 1fr;
+    }
+
+    .month-box {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .month-box input {
+        margin-left: 0;
+    }
+}
